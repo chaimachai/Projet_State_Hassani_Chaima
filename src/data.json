@@ -1,0 +1,29 @@
+{
+    "info":{
+        "name": "",
+        "email": "",
+        "phone": ""
+    },
+    "plan":[
+        {
+            "name": "Arcade",
+            "price": 9,
+            "img": "./img/arcade.svg"
+        },
+        {
+            "name": "Advanced",
+            "price": 12,
+            "img": "./img/advanced.svg"
+        },
+        {
+            "name": "Pro",
+            "price": 15,
+            "img": "./img/pro.svg"
+        }
+    ],
+    "picks":{
+        "name": "",
+        "email": "",
+        "phone": ""
+    }
+}
