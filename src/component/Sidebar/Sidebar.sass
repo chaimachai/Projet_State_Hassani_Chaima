@@ -1,14 +1,29 @@
 .sidebar
     background-image: url("../../assets/img/sidebar.svg")
     background-repeat: no-repeat
-    background-size: contain
+    background-size: cover
     color: white
+    padding: 4rem
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    background-position: bottom
+    border-radius: 10px
+    &.nodisabled
+        .number
+            cursor: pointer
+            &:hover
+                background-color: hsl(206, 94%, 87%)
+                color: black
+            &.actif
+                background-color: hsl(206, 94%, 87%)
+                color: black
     .div_sidebar
         display: flex
         justify-content: flex-start
         align-items: center
         gap: 1rem
-        padding: 1rem
         .number
             border: 1px solid white
             width: 2rem
@@ -16,12 +31,8 @@
             display: grid
             place-content: center
             border-radius: 50%
-            cursor: pointer
-            &.actif
-                background-color: hsl(206, 94%, 87%) !important
-                color: black !important
         .nom
-            h3
+            h4
                 margin-top: 0
             p
                 margin-bottom: 0

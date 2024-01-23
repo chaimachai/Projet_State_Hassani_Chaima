@@ -13,7 +13,7 @@
         {
             "name": "Advanced",
             "price": 12,
-            "img": "./img/advanced.svg"
+            "img": "./img/advenced.svg"
         },
         {
             "name": "Pro",
@@ -21,9 +21,21 @@
             "img": "./img/pro.svg"
         }
     ],
-    "picks":{
-        "name": "",
-        "email": "",
-        "phone": ""
-    }
+    "picks":[
+        {
+            "name": "Online service",
+            "price": 1,
+            "texte": "Acces to multiplayer games"
+        },
+        {
+            "name": "Larger storage",
+            "price": 2,
+            "texte": "Extra 1TB of cloud save"
+        },
+        {
+            "name": "Customizable profile",
+            "price": 2,
+            "texte": "Custom theme on your profile"
+        }
+    ]
 }

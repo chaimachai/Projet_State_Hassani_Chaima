@@ -1,6 +1,66 @@
-body
-    display: grid
-    place-content: center
 .App
     display: grid
     grid-template-columns: 1fr 2fr
+    padding: 2rem
+    gap: 2rem
+    background-color: white
+    border-radius: 10px
+    height: 70vh
+    width: 55vw
+    .step
+        height: 75%
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        flex-direction: column
+    .opacity
+        z-index: -1
+    .main
+        position: relative
+    .div_main
+        display: flex
+        justify-content: center
+        align-items: center
+        width: calc( 100% - 2rem )
+        flex-direction: column
+        padding: 1rem
+    .title
+        color: hsl(213, 96%, 18%)
+        height: 20%
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        flex-direction: column
+        margin-bottom: 1rem
+        h1
+            font-weight: bolder
+            margin-bottom: 0
+        p
+            color: hsl(231, 11%, 63%)
+    .button
+        position: absolute
+        bottom: 0
+        padding: 2rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: calc( 100% - 4rem )
+        button
+            cursor: pointer
+            border: none
+            font-weight: bold
+        .btn_back
+            background-color: transparent
+            color: hsl(213, 96%, 18%)
+        .btn_next, .btn_confirm
+            color: white
+            border-radius: 10px
+            padding: 1rem
+        .btn_next
+            background-color: hsl(213, 96%, 18%)
+            &:hover
+                background-color: hsl(214, 100%, 25%)
+            &.disabled
+                background-color: hsla(231, 11%, 63%, 0.7)
+        .btn_confirm
+            background-color: hsl(243, 100%, 62%)

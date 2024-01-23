@@ -1,0 +1,32 @@
+.picks
+    .option
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: 1px solid hsl(229, 24%, 87%)
+        border-radius: 10px
+        margin: 1rem
+        width: calc( 100% - 2rem )
+        padding: 0rem 2rem
+        p
+            color: rgb(164, 44, 167)
+        .div_option
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            h2
+                margin-bottom: 0
+                color: hsl(213, 96%, 18%)
+            p
+                margin-top: 0
+                color: hsl(231, 11%, 63%)
+            input
+                cursor: pointer
+                border-radius: 5px
+                accent-color: rgb(164, 44, 167)
+                margin-right: 1rem
+        &.actif
+            background-color: hsla(229, 24%, 87%,0.4)
+            border-color: rgb(164, 44, 167)
+        &:hover
+            border-color: rgb(164, 44, 167)
