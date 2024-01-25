@@ -3,10 +3,18 @@ import "./Summary.sass"
 
 export default function Summary({data, time, plan, option, setPage, promo10, setPromo10}){
     const [inputV, setInputV] = useState("")
+    const [message, setMessage] = useState(false)
     let promo = (e) =>{
-        if((e.target.id === "btn_input" || e.key === "Enter") && inputV.toLowerCase() === "promo10"){
-            setPromo10(true)
-            setInputV("")
+        if(e.target.id === "btn_input" || e.key === "Enter"){
+            if(inputV.toLowerCase() === "promo10"){
+                setPromo10(true)
+                setMessage(false)
+                setInputV("")
+            }else{
+                setMessage(true)
+                setInputV("")
+                setTimeout(()=>{setMessage(false)},3000)
+            }
         }
     }
     let total = data.plan.cards[plan][time] + option.reduce((acc, item) => { return acc += data.picks.cards[item][time] }, 0)
@@ -40,6 +48,9 @@ export default function Summary({data, time, plan, option, setPage, promo10, set
                     <label htmlFor="">{data.summary.promo.title}: </label>
                     <input onKeyUp={promo} value={inputV} onChange={(e)=>setInputV(e.target.value)} type="text" placeholder={data.summary.promo.placeholder} />
                     <button id="btn_input" onClick={promo}>{data.summary.general.confirm}</button>
+                    {message &&
+                        <p className="error">{data.summary.general.message}!</p>
+                    }
                 </div>
                 <div className="total">
                     <div className="div_total">

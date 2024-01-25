@@ -115,7 +115,8 @@
                 "totalM" : "Total (par mois)",
                 "totalY" : "Total (par an)",
                 "change": "Change",
-                "confirm": "OK"
+                "confirm": "OK",
+                "message": "Veuillez entrer un code promo valide"
             },
             "title":{
                 "title": "Confirmation",
@@ -252,7 +253,8 @@
                 "totalM" : "Total (per month)",
                 "totalY" : "Total (per year)",
                 "change": "Change",
-                "confirm": "OK"
+                "confirm": "OK",
+                "message": "Please enter a valid promo code"
             },
             "title":{
                 "title": "Finishing up",
