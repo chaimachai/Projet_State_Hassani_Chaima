@@ -6,3 +6,10 @@ body
     background-color: hsl(217, 100%, 97%)
     margin: 0
     font-family: 'Ubuntu', sans-serif
+body:has(.App.darkM)
+    background-image: radial-gradient(circle at top, rgb(255,255,255,0.1),#3c5187, hsl(213, 96%, 18%))
+@media screen and (max-width: 768px)
+    body
+        height: auto
+        padding: 4rem
+        min-height: 100vh

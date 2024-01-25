@@ -1,41 +1,59 @@
 {
-    "info":{
-        "name": "",
-        "email": "",
-        "phone": ""
-    },
+    "info":[
+        {
+            "name": "name",
+            "placeholder": "Vingt-Six",
+            "type": "text"
+        },
+        {
+            "name": "email",
+            "placeholder": "ingt_six@gmail.com",
+            "type": "email"
+        },
+        {
+            "name": "number",
+            "placeholder": "e.g.+1 234 567 890",
+            "type": "text"
+        }
+    ],
     "plan":[
         {
             "name": "Arcade",
-            "price": 9,
-            "img": "./img/arcade.svg"
+            "img": "./img/arcade.svg",
+            "price/month": 9,
+            "price/year": 90
         },
         {
             "name": "Advanced",
-            "price": 12,
-            "img": "./img/advenced.svg"
+            "img": "./img/advenced.svg",
+            "price/month": 12,
+            "price/year": 120
         },
         {
             "name": "Pro",
-            "price": 15,
-            "img": "./img/pro.svg"
+            "img": "./img/pro.svg",
+            "price/month": 15,
+            "price/year": 150
         }
     ],
     "picks":[
         {
             "name": "Online service",
-            "price": 1,
-            "texte": "Acces to multiplayer games"
+            "texte": "Acces to multiplayer games",
+            "price/month": 1,
+            "price/year": 10
         },
         {
             "name": "Larger storage",
-            "price": 2,
-            "texte": "Extra 1TB of cloud save"
+            "texte": "Extra 1TB of cloud save",
+            "price/month": 2,
+            "price/year": 20
         },
         {
             "name": "Customizable profile",
-            "price": 2,
-            "texte": "Custom theme on your profile"
+            "texte": "Custom theme on your profile",
+            "price/month": 2,
+            "price/year": 20
         }
     ]
 }

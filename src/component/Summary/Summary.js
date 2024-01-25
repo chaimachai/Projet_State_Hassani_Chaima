@@ -1,6 +1,6 @@
 import "./Summary.sass"
 
-export default function Summary({month,plan,option, setPage, total}){
+export default function Summary({time,plan,option, setPage}){
     return(
         <div className="summary step">
             <div className="title">
@@ -11,8 +11,8 @@ export default function Summary({month,plan,option, setPage, total}){
                 <div className="div_summary">
                 <div className="plans">
                     <div className="div_plan">
-                        <h3>{plan.name}({month ? "Monthly" : "Yearly"})</h3>
-                        <p>${month ? `${plan.price}/mo` : `${plan.price * 10}/yr`}</p>
+                        <h3>{plan.name}({time === "price/month" ? "Monthly" : "Yearly"})</h3>
+                        <p>${plan[time]}{time === "price/month" ? `/mo` : `/yr`}</p>
                     </div>
                     <p className="change" onClick={() => setPage(1)}>Change</p>
                 </div>
@@ -21,15 +21,15 @@ export default function Summary({month,plan,option, setPage, total}){
                         option.map((item,index) => (
                             <div key={index} className="summary_option" >
                                 <p>{item.name}</p>
-                                <p>+${month ? `${item.price}/mo` : `${item.price*10}/yr`}</p>
+                                <p>+${item[time]}{time === "price/month" ? `/mo` : `/yr`}</p>
                             </div>
                         ))
                     }
                 </div>
                 </div>
                 <div className="total">
-                <p>Total (per {month ? "month" : "year"})</p>
-                <p>${month? `${plan.price + total}/mo` : `${(plan.price + total)*10}/yr` }</p>
+                <p>Total (per {time === "price/month" ? "month" : "year"})</p>
+                <p>${plan[time] + option.reduce((acc, item) =>{return acc += item[time]},0) }{time === "price/month"? `/mo` : `/yr` }</p>
                 </div>
             </div>
         </div>

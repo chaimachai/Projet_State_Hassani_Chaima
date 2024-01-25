@@ -1,12 +1,10 @@
 import "./Picks.sass"
-export default function Picks({data, month,setOption, option, total, setTotal}){
+export default function Picks({data, time,setOption, option}){
     let change = (objet) =>{
         if(option.includes(objet)){
             setOption(option.filter(element => element !== objet))
-            setTotal(total - objet.price)
         }else{
             setOption([...option, objet])
-            setTotal(total + objet.price)
         }
     }
     return(
@@ -17,15 +15,15 @@ export default function Picks({data, month,setOption, option, total, setTotal}){
             </div>
             <div className="div_main">
                 {data.map((item,index)=>(
-                    <div className={`option ${option.includes(item) ? "actif" : null}`} key={index}>
-                        <div className="div_option">
-                            <input type="checkbox" checked={option.includes(item) ? true : false} onChange={()=>change(item)} />
+                    <div className={`option ${option.includes(item) ? "actif" : null}`} onClick={()=>change(item)} key={index}>
+                        <div className="div_option" >
+                            <input type="checkbox" checked={option.includes(item) ? true : false}/>
                             <div className="info">
                                 <h2>{item.name}</h2>
                                 <p>{item.texte}</p>
                             </div>
                         </div>
-                        <p>+${month ? `${item.price}/mo`:`${item.price*10}/yr`}</p>
+                        <p>+${item[time]}{time === "price/month" ? `/mo`:`/yr`}</p>
                     </div>
                 ))}
             </div>

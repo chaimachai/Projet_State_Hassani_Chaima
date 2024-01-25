@@ -1,7 +1,7 @@
 import "./Plan.sass"
 
 
-export default function Plan({data, month, setMonth, setPlan, plan}){
+export default function Plan({data, time, setTime, setPlan, plan}){
     return(
         <div className="plan step">
             <div className="title">
@@ -17,19 +17,19 @@ export default function Plan({data, month, setMonth, setPlan, plan}){
                                     <img src={item.img} alt="" />
                                 </div>
                                 <div className="texte">
-                                    <h1>{item.name}</h1>
-                                    <p>{month ? `${item.price}/mo` : `${item.price * 10}/yr`}</p>
+                                    <h2>{item.name}</h2>
+                                    <p>${item[time]}{time === "price/month" ? `/mo` : `/yr`}</p>
                                 </div>
                             </div>
                         ))
                     }
                 </div>
                 <div className="periode">
-                    <p className={month && "actif"} >Monthly</p>
-                    <div className="btn_P" onClick={() => { setMonth(!month) }} >
-                        <div style={month ? { left: "0.15rem" } : { right: "0.15rem" }} ></div>
+                    <p className={time === "price/month" ? "actif" : null} >Monthly</p>
+                    <div className="btn_P" onClick={() => {time === "price/month" ? setTime("price/year") : setTime("price/month")}} >
+                        <div style={time === "price/month" ? { transform: "translate(0.2rem)" } : { transform: "translate(1.8rem)" }} ></div>
                     </div>
-                    <p className={!month && "actif"} >Yearly</p>
+                    <p className={time === "price/year" ? "actif" : null} >Yearly</p>
                 </div>
             </div>
         </div>

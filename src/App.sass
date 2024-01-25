@@ -2,28 +2,45 @@
     display: grid
     grid-template-columns: 1fr 2fr
     padding: 2rem
-    gap: 2rem
     background-color: white
     border-radius: 10px
     height: 70vh
-    width: 55vw
+    width: 950px
+    .mode
+        position: absolute
+        right: 2rem
+        top: 2rem
+        width: 2rem
+        height: 2rem
+        border-radius: 50%
+        cursor: pointer
+        &.light
+            transform: rotate(360deg)
+            transition: transform 0.5s
+        &.dark
+            transform: rotate(-300deg)
+            transition: transform 0.5s
+            box-shadow: 0 0 2rem rgba(255,255 ,255 , 0.2)
+    .main
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
     .step
         height: 75%
         display: flex
         justify-content: center
         align-items: flex-start
         flex-direction: column
-    .opacity
-        z-index: -1
-    .main
-        position: relative
     .div_main
+        width: calc((950px - 8rem) / 3 * 2)
+        margin-bottom: 2rem
         display: flex
         justify-content: center
         align-items: center
-        width: calc( 100% - 2rem )
         flex-direction: column
-        padding: 1rem
+        padding: 0 1rem
     .title
         color: hsl(213, 96%, 18%)
         height: 20%
@@ -32,15 +49,18 @@
         align-items: flex-start
         flex-direction: column
         margin-bottom: 1rem
+        cursor: default
         h1
             font-weight: bolder
             margin-bottom: 0
         p
             color: hsl(231, 11%, 63%)
+    .opacity
+        z-index: -1
     .button
         position: absolute
         bottom: 0
-        padding: 2rem
+        padding: 1rem
         display: flex
         justify-content: space-between
         align-items: center
@@ -64,3 +84,128 @@
                 background-color: hsla(231, 11%, 63%, 0.7)
         .btn_confirm
             background-color: hsl(243, 100%, 62%)
+    .menu_bg
+        display: none
+        span
+            transition: all 0.5s
+            border-top: 2px solid black
+        &.actifB
+            span
+                transition: all 0.5s
+            span:first-of-type
+                transition: all 0.5s
+                transform: rotate(45deg) translateX(0.4rem)
+            span:nth-of-type(2)
+                transition: all 0.5s
+                transform: rotate(-45deg) translateX(0.6rem)
+            span:last-of-type
+                display: none
+.App.darkM
+    background-color: hsl(213, 96%, 18%)
+    box-shadow: 0 0 2rem rgba(255,255 ,255 , 0.2)
+    .finished h1, .title, .info label, .button .btn_back, .picks .option .div_option h2, .plan .cards .card .texte h2
+        color: white
+    .button .btn_next
+        background-color: #3c5187
+        &.disabled
+            background-color: hsla(231, 11%, 63%, 1)
+    .plan
+        .cards .card
+                border: 1px solid hsl(229, 24%, 87%)
+                &.actif, &:hover
+                    border-color:  rgb(191, 226, 253)
+        .periode
+            background-color: #3c5187
+            border-radius: 5px
+            p
+                color: hsl(213, 96%, 18%)
+                &.actif
+                    color: hsl(229, 24%, 87%)
+    .picks .option
+            border: 1px solid hsl(229, 24%, 87%)
+            p
+                color: rgb(191, 226, 253)
+            .div_option
+                input
+                    accent-color: rgb(191, 226, 253)
+                &.actif
+                    background-color: hsla(229, 24%, 87%,0.4)
+                    border-color: rgb(191, 226, 253)
+                &:hover
+                    border-color: rgb(191, 226, 253)
+    .summary .total p:last-of-type
+        color: rgb(191, 226, 253)
+    .summary .div_summary
+        background-color: rgb(199, 220, 251)
+        box-shadow: 0 0 2rem rgba(255,255 ,255 , 0.2)
+    .menu_bg span
+            border-color: white
+@media screen and (max-width: 768px)
+    .App
+        position: relative
+        grid-template-columns: 1fr
+        width: 80vw
+        height: auto
+        .main
+            padding: 0 0 4rem 0
+        .div_main
+            width: 100%
+        .step
+            align-items: center
+        &:has(.sidebar.actifB)
+            overflow-x: hidden
+            .mode, .menu_bg
+                top: 2rem
+                right: 2rem
+                transition: all 0.5s
+                z-index: 4
+        .mode
+            transition: all 0.5s
+            top: -3rem
+        .menu_bg
+            display: flex
+            position: absolute
+            top: -3rem
+            left: 2rem
+            width: 2rem
+            height: 2rem
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            flex-direction: column
+            z-index: 3
+            transition: all 0.5s
+            span
+                width: 2rem
+                height: 0.2rem
+@media screen and (max-width: 1024px) and (min-width: 769px)
+    .App
+        position: relative
+        grid-template-columns: 1fr
+        width: 80vw
+        &:has(.sidebar.actifB)
+            overflow-x: hidden
+            .mode, .menu_bg
+                top: 2rem
+                right: 2rem
+                transition: all 0.5s
+                z-index: 4
+        .mode
+            transition: all 0.5s
+            top: -4rem
+        .menu_bg
+            display: flex
+            position: absolute
+            top: -4rem
+            left: 2rem
+            width: 2rem
+            height: 2rem
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            flex-direction: column
+            z-index: 3
+            transition: all 0.5s
+            span
+                width: 2rem
+                height: 0.2rem
