@@ -1,13 +1,12 @@
 import "./Thank.sass"
 import thank from "../../assets/img/thankyou.svg"
 
-export default function Thank(){
+export default function Thank({data}){
     return (
         <div className='finished'>
             <img src={thank} alt="thank you" />
-            <h1>Thank You !</h1>
-            <p>Thanks for confirming your subscriptions! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com
-            </p>
+            <h1>{data.title.title}</h1>
+            <p>{data.title.subtitle}</p>
         </div>
     )
 }

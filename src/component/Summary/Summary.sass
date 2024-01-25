@@ -13,8 +13,8 @@
         background-color: hsl(217, 100%, 97%)
         width: calc(100% - 2rem)
         border-radius: 10px
-        padding: 2rem
-        margin-top: 1rem
+        padding: 1rem
+        margin-top: 0rem
     .plans
         display: flex
         justify-content: flex-start
@@ -40,11 +40,61 @@
         p:last-of-type
             color: hsl(213, 96%, 18%)
             font-weight: bold
+    .promo
+        // width: 100%
+        margin-top: 1rem
+        position: relative
+        input
+            border: 1px solid hsl(231, 11%, 63%)
+            border-radius: 10px
+            height: 1rem
+            margin-left: 1rem
+            padding: 0.5rem
+            font-weight: bold
+            &::placeholder
+                color: hsl(231, 11%, 63%)
+            &:focus
+                outline-color: rgb(189, 141, 186)   
+        button
+            position: absolute
+            border: 1px solid hsl(231, 11%, 63%)
+            border-radius: 10px
+            background-color: transparent
+            cursor: pointer
+            height: 2.1rem
+            padding: 0.5rem
+            font-weight: bold
+            right: 0rem
+            &:hover
+                color: rgb(189, 141, 186)  
     .total
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+        width: 100%
+        margin: 2rem 
+    .div_total
         display: flex
         justify-content: space-between
         align-items: center  
         width: 100%
+        p
+            margin: 0rem
+        p:first-of-type
+            color: hsl(231,11%,63%)      
+        p:last-of-type
+            color: hsl(243, 100%, 62%)
+            font-weight: bold
+    .div_promo
+        width: 100%
+        p
+            margin: 0rem
+        div
+            display: flex
+            justify-content: space-between
+            align-items: center  
+            width: 100%
         p:first-of-type
             color: hsl(231,11%,63%)      
         p:last-of-type

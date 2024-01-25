@@ -10,11 +10,11 @@ export default function Picks({data, time,setOption, option}){
     return(
         <div className="picks step">
             <div className="title">
-                <h1>Picks add-ons</h1>
-                <p>Add-on help enhance your gaming experience</p>
+                <h1>{data.title.title}</h1>
+                <p>{data.title.subtitle}</p>
             </div>
             <div className="div_main">
-                {data.map((item,index)=>(
+                {data.cards.map((item,index)=>(
                     <div className={`option ${option.includes(item) ? "actif" : null}`} onClick={()=>change(item)} key={index}>
                         <div className="div_option" >
                             <input type="checkbox" checked={option.includes(item) ? true : false}/>
@@ -23,7 +23,7 @@ export default function Picks({data, time,setOption, option}){
                                 <p>{item.texte}</p>
                             </div>
                         </div>
-                        <p>+${item[time]}{time === "price/month" ? `/mo`:`/yr`}</p>
+                        <p>+{data.general.unit}{item[time]}{time === "price/month" ? data.general.mo : data.general.yr}</p>
                     </div>
                 ))}
             </div>

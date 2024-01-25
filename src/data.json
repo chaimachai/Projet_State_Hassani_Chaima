@@ -1,59 +1,264 @@
 {
-    "info":[
-        {
-            "name": "name",
-            "placeholder": "Vingt-Six",
-            "type": "text"
+    "fr":{
+        "button":{
+            "next": "Etape suivante",
+            "back": "Etape précédente",
+            "confirm": "Confirmer"
         },
-        {
-            "name": "email",
-            "placeholder": "ingt_six@gmail.com",
-            "type": "email"
+        "sidebar":{
+            "step" : "ETAPE",
+            "liste" : ["TES INFO", "CHOISIS UN PLAN", "OPTIONS","RESUME"]
         },
-        {
-            "name": "number",
-            "placeholder": "e.g.+1 234 567 890",
-            "type": "text"
+        "info":{
+            "title":{
+                "title": "Info Personnelle",
+                "subtitle": "Veuillez fournir votre nom,email et numéro de téléphone."
+            },
+            "input":[
+                {
+                    "name": "name",
+                    "placeholder": "Vingt-Six",
+                    "phrase": "Ton nom est :",
+                    "type": "text"
+                },
+                {
+                    "name": "email",
+                    "placeholder": "ingt_six@gmail.com",
+                    "phrase": "Ton email est :",
+                    "type": "email"
+                },
+                {
+                    "name": "number",
+                    "placeholder": "e.g.+1 234 567 890",
+                    "phrase": "Ton numéro de téléphone est :",
+                    "type": "text"
+                }
+            ]
+        },
+        "plan":{
+            "general":{
+                "monthly": "Mensuel",
+                "yearly": "Annuel",
+                "unit": "€",
+                "mo": "/mo",
+                "yr": "/an"
+            },
+            "title":{
+                "title": "Choisis un forfait",
+                "subtitle": "Tu as le choix entre un forfait mensuel ou annuel"
+            },
+            "cards": [
+                {
+                    "name": "Arcade",
+                    "img": "./img/arcade.svg",
+                    "price/month": 9,
+                    "price/year": 90
+                },
+                {
+                    "name": "Avancé",
+                    "img": "./img/advenced.svg",
+                    "price/month": 12,
+                    "price/year": 120
+                },
+                {
+                    "name": "Pro",
+                    "img": "./img/pro.svg",
+                    "price/month": 15,
+                    "price/year": 150
+                }
+            ]
+        },
+        "picks":{
+            "general":{
+                "unit": "€",
+                "mo": "/mo",
+                "yr": "/an"
+            },
+            "title":{
+                "title": "Options",
+                "subtitle": "Ajoute de options pour améliorer ton experience de jeu"
+            },
+            "cards":[
+                {
+                    "name": "Service en ligne",
+                    "texte": "Acces a des jeux multijoueur",
+                    "price/month": 1,
+                    "price/year": 10
+                },
+                {
+                    "name": "Plus de stockage",
+                    "texte": "1TB de stockage supplémetaire",
+                    "price/month": 2,
+                    "price/year": 20
+                },
+                {
+                    "name": "Profil personnalisable",
+                    "texte": "Personnalise le thème de ton profil",
+                    "price/month": 2,
+                    "price/year": 20
+                }
+            ]
+        },
+        "summary":{
+            "general":{
+                "monthly": "Mensuel",
+                "yearly": "Annuel",
+                "unit": "€",
+                "mo": "/mo",
+                "yr": "/an",
+                "totalM" : "Total (par mois)",
+                "totalY" : "Total (par an)",
+                "change": "Change",
+                "confirm": "OK"
+            },
+            "title":{
+                "title": "Confirmation",
+                "subtitle": "Revérifie tout avant de confirmer."
+            },
+            "promo":{
+                "title": "Code Promo",
+                "placeholder": "Entre un code promo",
+                "promo10": "Tu as eu -10%",
+                "with": "avec promo",
+                "without": "sans promo"
+            }
+        },
+        "thank":{
+            "title":{
+                "title": "Merci !",
+                "subtitle": "Merci d'avoir confirmé vos abonnements ! Nous espérons que vous vous amuserez en utilisant notre plateforme. Si jamais vous avez besoin d'aide, n'hésitez pas à nous envoyer un e-mail à support@loremgaming.com"
+            }
         }
-    ],
-    "plan":[
-        {
-            "name": "Arcade",
-            "img": "./img/arcade.svg",
-            "price/month": 9,
-            "price/year": 90
+    },
+    "en": {
+        "button":{
+            "next": "Next Step",
+            "back": "Go Back",
+            "confirm": "Confirm"
         },
-        {
-            "name": "Advanced",
-            "img": "./img/advenced.svg",
-            "price/month": 12,
-            "price/year": 120
+        "sidebar":{
+            "step" : "STEP",
+            "liste" : ["YOUR INFO", "SELECT PLAN", "ADD-ONS","SUMMARY"]
         },
-        {
-            "name": "Pro",
-            "img": "./img/pro.svg",
-            "price/month": 15,
-            "price/year": 150
+        "info":{
+            "title":{
+                "title": "Personal info",
+                "subtitle": "Please provide your name,email address,and phone number."
+            },
+            "input":[
+                {
+                    "name": "name",
+                    "placeholder": "Vingt-Six",
+                    "phrase": "Your name is :",
+                    "type": "text"
+                },
+                {
+                    "name": "email",
+                    "placeholder": "ingt_six@gmail.com",
+                    "phrase": "Your email is :",
+                    "type": "email"
+                },
+                {
+                    "name": "number",
+                    "placeholder": "e.g.+1 234 567 890",
+                    "phrase": "Your phone number is :",
+                    "type": "text"
+                }
+            ]
+        },
+        "plan":{
+            "general":{
+                "monthly": "Monthly",
+                "yearly": "Yearly",
+                "unit": "$",
+                "mo": "/mo",
+                "yr": "/yr"
+            },
+            "title":{
+                "title": "Select you plan",
+                "subtitle": "You have the option of monthly or yearly billing"
+            },
+            "cards": [
+                {
+                    "name": "Arcade",
+                    "img": "./img/arcade.svg",
+                    "price/month": 9,
+                    "price/year": 90
+                },
+                {
+                    "name": "Advanced",
+                    "img": "./img/advenced.svg",
+                    "price/month": 12,
+                    "price/year": 120
+                },
+                {
+                    "name": "Pro",
+                    "img": "./img/pro.svg",
+                    "price/month": 15,
+                    "price/year": 150
+                }
+            ]
+        },
+        "picks":{
+            "general":{
+                "unit": "$",
+                "mo": "/mo",
+                "yr": "/yr"
+            },
+            "title":{
+                "title": "Picks add-ons",
+                "subtitle": "Add-on help enhance your gaming experience"
+            },
+            "cards":[
+                {
+                    "name": "Online service",
+                    "texte": "Acces to multiplayer games",
+                    "price/month": 1,
+                    "price/year": 10
+                },
+                {
+                    "name": "Larger storage",
+                    "texte": "Extra 1TB of cloud save",
+                    "price/month": 2,
+                    "price/year": 20
+                },
+                {
+                    "name": "Customizable profile",
+                    "texte": "Custom theme on your profile",
+                    "price/month": 2,
+                    "price/year": 20
+                }
+            ]
+        },
+        "summary":{
+            "general":{
+                "monthly": "Monthly",
+                "yearly": "Yearly",
+                "unit": "$",
+                "mo": "/mo",
+                "yr": "/yr",
+                "totalM" : "Total (per month)",
+                "totalY" : "Total (per year)",
+                "change": "Change",
+                "confirm": "OK"
+            },
+            "title":{
+                "title": "Finishing up",
+                "subtitle": "Double check everything looks OK before confirming."
+            },
+            "promo":{
+                "title": "Promo Code",
+                "placeholder": "Enter a promo code",
+                "promo10": "You get 10% off",
+                "with": "with promo",
+                "without": "without promo"
+            }
+        },
+        "thank":{
+            "title":{
+                "title": "Thank You !",
+                "subtitle": "Thanks for confirming your subscriptions! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com"
+            }
         }
-    ],
-    "picks":[
-        {
-            "name": "Online service",
-            "texte": "Acces to multiplayer games",
-            "price/month": 1,
-            "price/year": 10
-        },
-        {
-            "name": "Larger storage",
-            "texte": "Extra 1TB of cloud save",
-            "price/month": 2,
-            "price/year": 20
-        },
-        {
-            "name": "Customizable profile",
-            "texte": "Custom theme on your profile",
-            "price/month": 2,
-            "price/year": 20
-        }
-    ]
+    }
 }

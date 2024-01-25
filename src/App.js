@@ -21,10 +21,12 @@ function App() {
   const [option, setOption] = useState([]);
   const [burger, setBurger] = useState(true);
   const [dark , setDark] = useState(false);
+  const [promo10, setPromo10] = useState(false);
+  const [language, setLanguage] = useState("fr");
   let change = ()=>{
     if(page === 0 && user.name !== "" && user.email !== "" && user.number !== ""){
       setPage(page + 1)
-    }else if (page === 1 && plan !== "" ){
+    }else if (page === 1 && plan !== "" && user.name !== "" && user.email !== "" && user.number !== "" ){
       setPage(page + 1)
     }else if (page === 2){
       setPage(page + 1)
@@ -32,19 +34,14 @@ function App() {
   }
   let changeS = (index)=>{
     if(page !== 4){
-      if(index < page){
+      if(index <= page){
         setPage(index);
         setBurger(true)
       }else if(index === 1 && user.name !== "" && user.email !== "" && user.number !== ""){
         setPage(index);
         setBurger(true)
-      }else if (index === 2 && plan !== "" ){
+      }else if ((index === 2 || index === 3) && user.name !== "" && user.email !== "" && user.number !== "" && plan !== ""){
         setPage(index);
-        setBurger(true)
-      }else if (index === 3 && plan !== "" && user.name !== "" && user.email !== "" && user.number !== "" ){
-        setPage(index);
-        setBurger(true)
-      }else if (page === index){
         setBurger(true)
       }
     }
@@ -55,17 +52,17 @@ function App() {
         <span></span><span></span><span></span>
       </div>
       <img className={dark ? "dark mode" : "light mode"} src={dark ? moon : sun} onClick={() => setDark(!dark)} alt="dark mode" />
-      <Sidebar page={page} burger={burger} change={changeS} />
+      <Sidebar data={data[language].sidebar} plan={plan} user={user} setLanguage={setLanguage} language={language} page={page} burger={burger} change={changeS} />
       <div className="main">
-        {page === 0 && <Info data={data.info} user={user} setUser={setUser} />}
-        {page === 1 && <Plan data={data.plan} plan={plan} setPlan={setPlan} time={time} setTime={setTime} />}
-        {page === 2 && <Picks data={data.picks} time={time} setOption={setOption} option={option} />}
-        {page === 3 && <Summary setPage={setPage} time={time} plan={plan} option={option} />}
-        {page === 4 && <Thank />}
+        {page === 0 && <Info data={data[language].info} user={user} setUser={setUser} />}
+        {page === 1 && <Plan data={data[language].plan} plan={plan} setPlan={setPlan} time={time} setTime={setTime} />}
+        {page === 2 && <Picks data={data[language].picks} time={time} setOption={setOption} option={option} />}
+        {page === 3 && <Summary data={data[language].summary} promo10={promo10} setPromo10={setPromo10} setPage={setPage} time={time} plan={plan} option={option} />}
+        {page === 4 && <Thank data={data[language].thank} />}
         <div className="button">
-          {page !== 4 && <button className={`btn_back ${page === 0 ? "opacity" : null}`} onClick={() => setPage(page - 1)}>Go Back</button>}
-          {page !== 3 && page !== 4 && <button className={`btn_next ${(page === 0 && (user.name === "" || user.email === "" || user.number === "")) || (page === 1 && plan === "") ? "disabled" : null}`} onClick={change}>Next Step</button>}
-          {page === 3 && <button className='btn_confirm' onClick={() => setPage(4)}>Confirm</button>}
+          {page !== 4 && <button className={`btn_back ${page === 0 ? "opacity" : null}`} onClick={() => setPage(page - 1)}>{data[language].button.back}</button>}
+          {page !== 3 && page !== 4 && <button className={`btn_next ${(page === 0 && (user.name === "" || user.email === "" || user.number === "")) || (page === 1 && plan === "") ? "disabled" : null}`} onClick={change}>{data[language].button.next}</button>}
+          {page === 3 && <button className='btn_confirm' onClick={() => setPage(4)}>{data[language].button.confirm}</button>}
         </div>
       </div>
     </div>
