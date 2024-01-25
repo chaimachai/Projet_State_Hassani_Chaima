@@ -1,6 +1,6 @@
 import "./Sidebar.sass"
 
-export default function Sidebar({data, page,change, burger, setLanguage, language, plan, user}){
+export default function Sidebar({data, page, change, burger, setLanguage, language, plan, user}){
     return(
             <div className={`sidebar ${page !== 4 ? "nodisabled" : null} ${!burger ? "actifB" : null}`}>
                 {

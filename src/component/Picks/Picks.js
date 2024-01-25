@@ -1,5 +1,5 @@
 import "./Picks.sass"
-export default function Picks({data, time,setOption, option}){
+export default function Picks({data, time, setOption, option}){
     let change = (objet) =>{
         if(option.includes(objet.id)){
             setOption(option.filter(element => element !== objet.id))

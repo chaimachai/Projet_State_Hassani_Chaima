@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Summary.sass"
 
-export default function Summary({data,time,plan,option, setPage, promo10, setPromo10}){
+export default function Summary({data, time, plan, option, setPage, promo10, setPromo10}){
     const [inputV, setInputV] = useState("")
     let promo = (e) =>{
         if((e.target.id === "btn_input" || e.key === "Enter") && inputV.toLowerCase() === "promo10"){
