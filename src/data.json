@@ -49,18 +49,21 @@
             },
             "cards": [
                 {
+                    "id": 0,
                     "name": "Arcade",
                     "img": "./img/arcade.svg",
                     "price/month": 9,
                     "price/year": 90
                 },
                 {
-                    "name": "Avancé",
+                    "id": 1,
+                    "name": "Advanced",
                     "img": "./img/advenced.svg",
                     "price/month": 12,
                     "price/year": 120
                 },
                 {
+                    "id": 2,
                     "name": "Pro",
                     "img": "./img/pro.svg",
                     "price/month": 15,
@@ -80,18 +83,21 @@
             },
             "cards":[
                 {
+                    "id": 0,
                     "name": "Service en ligne",
                     "texte": "Acces a des jeux multijoueur",
                     "price/month": 1,
                     "price/year": 10
                 },
                 {
+                    "id": 1,
                     "name": "Plus de stockage",
                     "texte": "1TB de stockage supplémetaire",
                     "price/month": 2,
                     "price/year": 20
                 },
                 {
+                    "id": 2,
                     "name": "Profil personnalisable",
                     "texte": "Personnalise le thème de ton profil",
                     "price/month": 2,
@@ -180,18 +186,21 @@
             },
             "cards": [
                 {
+                    "id": 0,
                     "name": "Arcade",
                     "img": "./img/arcade.svg",
                     "price/month": 9,
                     "price/year": 90
                 },
                 {
+                    "id": 1,
                     "name": "Advanced",
                     "img": "./img/advenced.svg",
                     "price/month": 12,
                     "price/year": 120
                 },
                 {
+                    "id": 2,
                     "name": "Pro",
                     "img": "./img/pro.svg",
                     "price/month": 15,
@@ -211,18 +220,21 @@
             },
             "cards":[
                 {
+                    "id": 0,
                     "name": "Online service",
                     "texte": "Acces to multiplayer games",
                     "price/month": 1,
                     "price/year": 10
                 },
                 {
+                    "id": 1,
                     "name": "Larger storage",
                     "texte": "Extra 1TB of cloud save",
                     "price/month": 2,
                     "price/year": 20
                 },
                 {
+                    "id": 2,
                     "name": "Customizable profile",
                     "texte": "Custom theme on your profile",
                     "price/month": 2,

@@ -57,7 +57,7 @@ function App() {
         {page === 0 && <Info data={data[language].info} user={user} setUser={setUser} />}
         {page === 1 && <Plan data={data[language].plan} plan={plan} setPlan={setPlan} time={time} setTime={setTime} />}
         {page === 2 && <Picks data={data[language].picks} time={time} setOption={setOption} option={option} />}
-        {page === 3 && <Summary data={data[language].summary} promo10={promo10} setPromo10={setPromo10} setPage={setPage} time={time} plan={plan} option={option} />}
+        {page === 3 && <Summary data={data[language]} promo10={promo10} setPromo10={setPromo10} setPage={setPage} time={time} plan={plan} option={option} />}
         {page === 4 && <Thank data={data[language].thank} />}
         <div className="button">
           {page !== 4 && <button className={`btn_back ${page === 0 ? "opacity" : null}`} onClick={() => setPage(page - 1)}>{data[language].button.back}</button>}

@@ -12,7 +12,7 @@ export default function Plan({data, time, setTime, setPlan, plan}){
                 <div className="cards">
                     {
                         data.cards.map((item, index) => (
-                            <div className={`card ${plan === item ? "actif" : null}`} onClick={() => setPlan(item)} key={index}>
+                            <div className={`card ${plan === item.id ? "actif" : null}`} onClick={() => setPlan(item.id)} key={index}>
                                 <div className="img">
                                     <img src={item.img} alt="" />
                                 </div>
