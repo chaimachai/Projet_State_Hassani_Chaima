@@ -115,8 +115,7 @@
                 "totalM" : "Total (par mois)",
                 "totalY" : "Total (par an)",
                 "change": "Change",
-                "confirm": "OK",
-                "message": "Veuillez entrer un code promo valide"
+                "confirm": "OK"
             },
             "title":{
                 "title": "Confirmation",
@@ -127,7 +126,8 @@
                 "placeholder": "Entre un code promo",
                 "promo10": "Tu as eu -10%",
                 "with": "avec promo",
-                "without": "sans promo"
+                "without": "sans promo",
+                "message": "Veuillez entrer un code promo valide"
             }
         },
         "thank":{
@@ -253,8 +253,7 @@
                 "totalM" : "Total (per month)",
                 "totalY" : "Total (per year)",
                 "change": "Change",
-                "confirm": "OK",
-                "message": "Please enter a valid promo code"
+                "confirm": "OK"
             },
             "title":{
                 "title": "Finishing up",
@@ -265,7 +264,8 @@
                 "placeholder": "Enter a promo code",
                 "promo10": "You get 10% off",
                 "with": "with promo",
-                "without": "without promo"
+                "without": "without promo",
+                "message": "Please enter a valid promo code"
             }
         },
         "thank":{

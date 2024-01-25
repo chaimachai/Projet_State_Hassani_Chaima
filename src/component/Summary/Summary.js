@@ -49,7 +49,7 @@ export default function Summary({data, time, plan, option, setPage, promo10, set
                     <input onKeyUp={promo} value={inputV} onChange={(e)=>setInputV(e.target.value)} type="text" placeholder={data.summary.promo.placeholder} />
                     <button id="btn_input" onClick={promo}>{data.summary.general.confirm}</button>
                     {message &&
-                        <p className="error">{data.summary.general.message}!</p>
+                        <p className="error">{data.summary.promo.message}!</p>
                     }
                 </div>
                 <div className="total">
