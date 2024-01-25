@@ -22,7 +22,7 @@ function App() {
   const [burger, setBurger] = useState(true);
   const [dark , setDark] = useState(false);
   const [promo10, setPromo10] = useState(false);
-  const [language, setLanguage] = useState("fr");
+  const [language, setLanguage] = useState("en");
   let change = ()=>{
     if(page === 0 && user.name !== "" && user.email !== "" && user.number !== ""){
       setPage(page + 1)
