@@ -17,7 +17,7 @@ export default function Picks({data, time, setOption, option}){
                 {data.cards.map((item,index)=>(
                     <div className={`option ${option.includes(item.id) ? "actif" : null}`} onClick={()=>change(item)} key={index}>
                         <div className="div_option" >
-                            <input type="checkbox" checked={option.includes(item.id) ? true : false}/>
+                            <input type="checkbox" readOnly={true} checked={option.includes(item.id) ? true : false}/>
                             <div className="info">
                                 <h2>{item.name}</h2>
                                 <p>{item.texte}</p>
