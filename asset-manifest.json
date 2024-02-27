@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Projet_State_Hassani_Chaima/static/css/main.66b03eac.css",
+    "main.js": "/Projet_State_Hassani_Chaima/static/js/main.02ec5792.js",
+    "static/js/787.07d93129.chunk.js": "/Projet_State_Hassani_Chaima/static/js/787.07d93129.chunk.js",
+    "static/media/sidebar.svg": "/Projet_State_Hassani_Chaima/static/media/sidebar.6918153f38678372ceb1.svg",
+    "static/media/thankyou.svg": "/Projet_State_Hassani_Chaima/static/media/thankyou.ee753f231cc5a5789b8eb922a96472c0.svg",
+    "static/media/sun.svg": "/Projet_State_Hassani_Chaima/static/media/sun.7940fa00668a3a5ad46d65af1eefd0e1.svg",
+    "index.html": "/Projet_State_Hassani_Chaima/index.html",
+    "static/media/moon.svg": "/Projet_State_Hassani_Chaima/static/media/moon.ed5f61dbac1513fc8745c7111af621eb.svg",
+    "main.66b03eac.css.map": "/Projet_State_Hassani_Chaima/static/css/main.66b03eac.css.map",
+    "main.02ec5792.js.map": "/Projet_State_Hassani_Chaima/static/js/main.02ec5792.js.map",
+    "787.07d93129.chunk.js.map": "/Projet_State_Hassani_Chaima/static/js/787.07d93129.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66b03eac.css",
+    "static/js/main.02ec5792.js"
+  ]
+}
